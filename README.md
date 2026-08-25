@@ -2,7 +2,7 @@
 
 > Automatically audit your project dependencies and catch unmaintained or zombie packages before they become security risks.
 
-![GitHub Action](https://img.shields.io/badge/GitHub%20Action-v1.0.0-blue?logo=githubactions) ![License](https://img.shields.io/badge/license-MIT-green)
+![GitHub Action](https://img.shields.io/badge/GitHub%20Action-v1.0.2-blue?logo=githubactions) ![License](https://img.shields.io/badge/license-MIT-green)
 
 Security bots like Dependabot alert you when a package has known vulnerabilities or new releases available. However, they fail to warn you when a dependency's maintainer completely abandons the project.
 
@@ -57,10 +57,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Check for abandoned dependencies
-        uses: ale94lko/abandoned-deps-action@v1
+        uses: ale94lko/abandoned-deps-action@v1.0.2
         with:
           manifest-path: 'package.json'
           max-months-inactive: '12'
@@ -82,10 +82,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Check for abandoned dependencies
-        uses: ale94lko/abandoned-deps-action@v1
+        uses: ale94lko/abandoned-deps-action@v1.0.2
         with:
           manifest-path: 'composer.json'
           max-months-inactive: '12'
