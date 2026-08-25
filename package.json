@@ -1,0 +1,10 @@
+{
+  "name": "abandoned-deps-action",
+  "version": "1.0.0",
+  "description": "GitHub Action to detect unmaintained or abandoned project dependencies",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "private": true
+}

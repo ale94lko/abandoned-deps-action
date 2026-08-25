@@ -1,0 +1,24 @@
+name: 'Abandoned Dependencies Checker'
+description: 'Detect zombie or unmaintained dependencies in your project by auditing source repository activity.'
+author: 'ale94lko'
+branding:
+  icon: 'alert-triangle'
+  color: 'yellow'
+
+inputs:
+  manifest-path:
+    description: 'Path to the dependency manifest file (e.g., package.json)'
+    required: false
+    default: 'package.json'
+  max-months-inactive:
+    description: 'Maximum number of inactive months before marking a package as unmaintained'
+    required: false
+    default: '12'
+  github-token:
+    description: 'GitHub Token to authenticate requests and prevent API rate limiting'
+    required: false
+    default: ${{ github.token }}
+
+runs:
+  using: 'node20'
+  main: 'index.js'
