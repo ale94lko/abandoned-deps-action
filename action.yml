@@ -7,7 +7,7 @@ branding:
 
 inputs:
   manifest-path:
-    description: 'Path to the dependency manifest file (e.g., package.json)'
+    description: 'Path to the dependency manifest file (e.g., package.json or composer.json)'
     required: false
     default: 'package.json'
   max-months-inactive:
